@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Grocery.App.Views.NewProductView"
+             xmlns:vm="clr-namespace:Grocery.App.ViewModels"
+             x:DataType="vm:NewProductViewModel"
+             Title="Voeg nieuw product toe">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Voeg een nieuw product toe" FontSize="24" HorizontalOptions="Center" />
+            <Label Text="Productnaam"></Label>
+            <Entry Placeholder="Product Naam" Text="{Binding Name}" />
+            <Label Text="Voorraad"></Label>
+            <Entry Placeholder="Voorraad" Text="{Binding Stock}" Keyboard="Numeric" />
+            <Label Text="THT Datum"></Label>
+            <Entry Placeholder="THT Datum" Text="{Binding ShelfLife}" />
+            <Label Text="Productprijs"></Label>
+            <Entry Placeholder="Prijs" Text="{Binding Price}" Keyboard="Numeric" />
+            <Button Text="Voeg toe" Command="{Binding AddProductCommand}" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
